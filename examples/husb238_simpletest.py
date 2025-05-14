@@ -6,8 +6,11 @@ Simple test for the HUSB238.
 Reads available voltages and then sets each available voltage.
 Reads the set voltage and current from the attached PD power supply.
 """
+
 import time
+
 import board
+
 import adafruit_husb238
 
 i2c = board.I2C()
