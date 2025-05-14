@@ -143,6 +143,7 @@ class Adafruit_HUSB238:
     _PDO_RESPONSE_CODES = [
         "NO RESPONSE",
         None,  # Success
+        None,  # Reserved
         "INVALID COMMAND OR ARGUMENT",
         "COMMAND NOT SUPPORTED",
         "TRANSACTION FAILED, NO GOOD CRC",
