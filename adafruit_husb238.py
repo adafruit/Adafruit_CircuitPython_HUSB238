@@ -33,14 +33,16 @@ Implementation Notes
 """
 
 import time
-from micropython import const
+
 from adafruit_bus_device.i2c_device import I2CDevice
 from adafruit_register.i2c_bit import ROBit
 from adafruit_register.i2c_bits import ROBits, RWBits
 from adafruit_register.i2c_struct import UnaryStruct
+from micropython import const
 
 try:
-    import typing  # pylint: disable=unused-import
+    import typing
+
     from busio import I2C
 except ImportError:
     pass
@@ -146,9 +148,7 @@ class Adafruit_HUSB238:
         "TRANSACTION FAILED, NO GOOD CRC",
     ]
 
-    def __init__(
-        self, i2c: typing.Type[I2C], i2c_address: int = _I2CADDR_DEFAULT
-    ) -> None:
+    def __init__(self, i2c: typing.Type[I2C], i2c_address: int = _I2CADDR_DEFAULT) -> None:
         """
         :param i2c: The I2C device we'll use to communicate.
         :type i2c: Type[I2C]
